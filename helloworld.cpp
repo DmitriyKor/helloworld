@@ -4,8 +4,6 @@ using namespace std;
 
 int main()           
 {
-    
-    cout << "I love CPP";  
-    
-    return 0;
+    cout << "I love CPP";         
+    return 0;     
 }
