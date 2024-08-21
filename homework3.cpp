@@ -9,7 +9,7 @@ int main()
   Зірок У Галактиці
   Середньомісячний Рівень Опадів
   */
-  int MyAge;
+  int MyAgeYears;
   double BackyardArea;
   long long StarQty;
   double AveragePrecipitationMonthly;
