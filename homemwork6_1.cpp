@@ -5,7 +5,7 @@ int IntToPower(int Value, int Power)
 {
     if (Power>1) return Value*IntToPower(Value, Power-1);
     else return Value;
-};
+}
 
 int main()
 {
