@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+
+
+
+
 class Employee 
 {
 private:
@@ -20,6 +24,8 @@ public:
     void ShowInfo();
     void ShowSalaryRounded();
 };
+
+
 
 Employee::Employee(string AName, unsigned short AAge, unsigned short AYearsOfService, unsigned int ASalary)
 {
