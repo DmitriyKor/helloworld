@@ -4,6 +4,19 @@ using namespace std;
 
 int main()
 {
+
+    int Value;
+    int *pValue = &Value;
+    *pValue = 26;
+    cout << *pValue << "\n";
+
+    int &rValue = Value;
+    rValue = 27;
+    cout << *pValue;
+
+
+    /*
+
     int Arr10x10 [10][10];
     for (int x=0;x<10;x++)
     {
@@ -34,6 +47,6 @@ int main()
     } 
     while (i<=200);
    
-
+  */
     return 0;
 }
