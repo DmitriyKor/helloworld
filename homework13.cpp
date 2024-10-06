@@ -53,6 +53,7 @@ int main()
     if (res != FIELDVALUE::NOTHING)
         cout << "Winner is " << GetSymbol(res);
 
+    delete Fld;
     return 0;
 }
 
