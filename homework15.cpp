@@ -32,7 +32,7 @@ public:
     JetPlane (int power, int seat_number, int engine_number) : Rocket(power), Airplane(seat_number), 
         mJetEngineNumber(engine_number) {}; 
     virtual ~JetPlane(){};
-    virtual int GetTotalPower(){return mJetEngineNumber*mPower;};
+    virtual int GetTotalPower() const {return mJetEngineNumber*mPower;};
 };
 
 class Boeing747 : public JetPlane
