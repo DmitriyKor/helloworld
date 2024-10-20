@@ -50,8 +50,6 @@ int main()
     Vehicle *v1 = new Vehicle(4, 150, 160);
     cout << "Created a vehicle with a number of passengers " << (v1->*pFunc)() << endl;
     cout << "Other params: " << (v1->*pFunc2)() <<", "<< (v1->*pFunc3)() << endl;
-    
- 
  
     Vehicle *v2 = new Vehicle(2, 240, 210);
     cout << "Created a vehicle with a number of passengers " << (v2->*pFunc)() << endl;
@@ -59,8 +57,8 @@ int main()
     Vehicle *v3 = new Vehicle(12, 140, 180);
     cout << "Created a vehicle with a number of passengers " << (v3->*pFunc)() << endl;
 
-   // cout << "Vehicle count=" << Vehicle::GetAutoparkSize() << endl;
-   // delete v1;
+    cout << "Vehicle count=" << Vehicle::GetAutoparkSize() << endl;
+    delete v1;
     cout << "Vehicle count=" << Vehicle::GetAutoparkSize() << endl;
     delete v2;
     cout << "Vehicle count=" << Vehicle::GetAutoparkSize() << endl;
