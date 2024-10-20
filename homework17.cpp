@@ -18,8 +18,15 @@ public:
     int GetPassengers() const { return mPassengers; }
     int GetHorsePower() const { return mHorsePower; }
     int GetMaxSpeed() const { return mMaxSpeed; }
-    int TestFunction() {cout << "Vehicle test function\n"; return 0;}
+    int TestFunction();
 };
+
+int Vehicle::TestFunction()
+{
+    cout << "Vehicle test function\n"; 
+    return 0;
+}
+
 
 int Vehicle::AutoparkSize = 0;
 
