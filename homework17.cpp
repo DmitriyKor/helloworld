@@ -34,7 +34,7 @@ typedef int (Vehicle::*MFuncPtr)() const;
 
 int main()
 {  
-    /*Чи можемо отримати доступ до функції-члена не створюючи клас? (не статичної)*/
+    /*Чи можемо отримати доступ до нестатичної функції-члена не створюючи клас?*/
     int (Vehicle::*pTestFunc)() = &Vehicle::TestFunction;
     void * ptr = (void *) (pTestFunc);    
     int (*MyTestFunc)() = (int (*) ())ptr;  
