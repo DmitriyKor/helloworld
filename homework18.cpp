@@ -35,6 +35,17 @@ public:
     ~Animal(){delete mName;}
 };
 
+class Set
+{
+
+};
+
+class BoundedArray
+{
+private:
+    Set mSet;
+};
+
 int main()
 {
     String *str1 = new String("test string");
