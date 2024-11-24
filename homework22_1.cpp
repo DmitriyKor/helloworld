@@ -63,9 +63,10 @@ bool operator==(const List<T> &rList1, const List<T> &rList2)
 {
     if (rList1.theCount!=rList2.theCount) 
     {
-        count "Length different";
+        cout << "Length different";
         return false;
     };  
+    cout << "Length the same";
 
     if (rList1.theCount==0)
         return true;
