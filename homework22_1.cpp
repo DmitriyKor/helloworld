@@ -16,6 +16,11 @@ public:
    	ListCell *next;
 };
 
+template <typename T>
+class List;
+
+//template <typename U> bool operator==(const List<U> & rList1, const List<U> & rList2);
+
 
 template <typename T>
 class List
@@ -32,7 +37,8 @@ public:
 	}
 	int count() const { return theCount; }
     void display() const;
-    template <typename U> friend bool operator==(const List<U> & rList1, const List<U> & rList2);
+    template <typename U>
+    friend bool operator==(const List<U> & rList1, const List<U> & rList2);
 private:
 	T val;
 	ListCell<T> *next;
@@ -40,6 +46,8 @@ private:
 	ListCell<T> *tail;
 	int theCount;
 };
+
+
 
 class Cat
 {
@@ -61,19 +69,15 @@ ostream& operator<<(ostream &os, const Cat & rCat)
 template <typename U>
 bool operator==(const List<U> &rList1, const List<U> &rList2)
 {
-    cout << "\n== operator\n";
     if (rList1.theCount!=rList2.theCount) 
-    {
-        cout << "Length different";
         return false;
-    };  
-    cout << "Length the same";
 
     if (rList1.theCount==0)
         return true;
+
     ListCell<U> *cell1 = rList1.head;    
     ListCell<U> *cell2 = rList2.head;    
-    cout << "/ncheck1/n";
+
     while (cell1!=0)
     {
         if (cell1->val!=cell2->val) 
@@ -85,6 +89,8 @@ bool operator==(const List<U> &rList1, const List<U> &rList2)
     }  
     return true;
 }
+
+
 
 
 template <typename T>
@@ -192,9 +198,9 @@ int main()
     MyIntList2->insert(10);
     MyIntList2->insert(8);
     MyIntList2->append(20);
-    MyIntList2->insert(3);
-    bool equals = (MyIntList == MyIntList2);
-
+    MyIntList2->insert(/*3*/2);
+    bool equals = (*MyIntList == *MyIntList2);
+    cout << "Two list check is " << equals << endl;
 
     delete MyStringList;
     delete MyIntList;
