@@ -16,6 +16,7 @@ public:
    	ListCell *next;
 };
 
+
 template <typename T>
 class List;
 
@@ -164,7 +165,14 @@ List<T>::~List()
     theCount = 0;
 }
 
-
+template <typename T>
+void swapvalues(T &val1, T &val2)
+{
+    T tmpval;
+    tmpval = val1;
+    val1 = val2;
+    val2 = tmpval;
+}
 
 int main()
 {
@@ -205,5 +213,11 @@ int main()
     delete MyStringList;
     delete MyIntList;
     delete MyCatList;
+    
+    int a1 = 45;
+    int a2 = 65;
+    swapvalues(a1, a2);
+    cout << "\n swap test : " << a1 << ", " << a2 << endl;
+    
     return 0;
 }
