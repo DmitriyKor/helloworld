@@ -32,7 +32,7 @@ public:
 	}
 	int count() const { return theCount; }
     void display() const;
-    friend bool operator==(const List<T> & rList1, const List<T> &rList2);
+    template <typename U> friend bool operator==(const List<U> & rList1, const List<U> & rList2);
 private:
 	T val;
 	ListCell<T> *next;
@@ -58,9 +58,10 @@ ostream& operator<<(ostream &os, const Cat & rCat)
     return os;
 }
 
-template <typename T>
-bool operator==(const List<T> &rList1, const List<T> &rList2)
+template <typename U>
+bool operator==(const List<U> &rList1, const List<U> &rList2)
 {
+    cout << "\n== operator\n";
     if (rList1.theCount!=rList2.theCount) 
     {
         cout << "Length different";
@@ -70,8 +71,8 @@ bool operator==(const List<T> &rList1, const List<T> &rList2)
 
     if (rList1.theCount==0)
         return true;
-    ListCell<T> *cell1 = rList1.head;    
-    ListCell<T> *cell2 = rList2.head;    
+    ListCell<U> *cell1 = rList1.head;    
+    ListCell<U> *cell2 = rList2.head;    
     cout << "/ncheck1/n";
     while (cell1!=0)
     {
@@ -192,7 +193,7 @@ int main()
     MyIntList2->insert(8);
     MyIntList2->append(20);
     MyIntList2->insert(3);
-    cout << "checking == " << (MyIntList == MyIntList2);
+    bool equals = (MyIntList == MyIntList2);
 
 
     delete MyStringList;
